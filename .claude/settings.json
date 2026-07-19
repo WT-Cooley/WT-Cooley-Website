@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(grep -n \"<a$\\\\|<a \\\\|href=\" /private/tmp/claude-501/-Users-aidancooley-Documents-WT-Cooley-Website/2ea75ed9-580d-4ac5-9f57-aa3eef970d4c/scratchpad/WilliamTheodore.utf8.html)",
+      "Bash(awk 'NR==1940,NR==2021' /private/tmp/claude-501/-Users-aidancooley-Documents-WT-Cooley-Website/2ea75ed9-580d-4ac5-9f57-aa3eef970d4c/scratchpad/WilliamTheodore.utf8.html)",
+      "Bash(awk 'NR==2024,NR==2205' /private/tmp/claude-501/-Users-aidancooley-Documents-WT-Cooley-Website/2ea75ed9-580d-4ac5-9f57-aa3eef970d4c/scratchpad/WilliamTheodore.utf8.html)",
+      "Bash(python3 -c \"import bs4; print\\(bs4.__version__\\)\")",
+      "Bash(pip3 install *)",
+      "Bash(python3 scripts/convert_word_html.py \"William Theodore Cooley/WilliamTheodore.html\" --out /tmp/wt-landing.fragment.html)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
