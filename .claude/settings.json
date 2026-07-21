@@ -7,7 +7,20 @@
       "Bash(python3 -c \"import bs4; print\\(bs4.__version__\\)\")",
       "Bash(pip3 install *)",
       "Bash(python3 scripts/convert_word_html.py \"William Theodore Cooley/WilliamTheodore.html\" --out /tmp/wt-landing.fragment.html)",
-      "Bash(python3 -c ' *)"
+      "Bash(python3 -c ' *)",
+      "Bash(python3 scripts/convert_word_html.py \"William Theodore Cooley/Heretics.html\" --out /tmp/heretics.fragment.html)",
+      "Bash(python3 scripts/convert_word_html.py \"William Theodore Cooley/WTC-Sermon-1.html\" --out /tmp/sermon.fragment.html)",
+      "Bash(python3 scripts/convert_word_html.py \"William Theodore Cooley/Civil Society Stewardship Message.html\" --out /tmp/civil.fragment.html)",
+      "Bash(sips -g pixelWidth -g pixelHeight \"William Theodore Cooley/WilliamTheodore.fld/image001.jpg\")",
+      "Bash(python3 scripts/verify_text_parity.py \"William Theodore Cooley/Heretics.html\" writings/william-theodore/heretics-in-the-pews.html)",
+      "Bash(python3 scripts/verify_text_parity.py \"William Theodore Cooley/WTC-Sermon-1.html\" writings/william-theodore/snakes-wisdom-televised-sports.html)",
+      "Bash(python3 scripts/verify_text_parity.py \"William Theodore Cooley/Civil Society Stewardship Message.html\" writings/william-theodore/stewardship-civil-society.html --exclude \"Return to Home Page\")",
+      "Bash(python3 scripts/verify_text_parity.py \"William Theodore Cooley/WilliamTheodore.html\" writings/william-theodore.html)",
+      "Skill(run)",
+      "Skill(run:*)",
+      "Bash(python3 -c \"import playwright\")",
+      "Bash(open \"http://localhost:8731/index.html\")",
+      "Bash(git check-ignore *)"
     ]
   }
 }
