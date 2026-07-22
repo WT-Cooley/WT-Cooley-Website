@@ -20,7 +20,11 @@
       "Skill(run:*)",
       "Bash(python3 -c \"import playwright\")",
       "Bash(open \"http://localhost:8731/index.html\")",
-      "Bash(git check-ignore *)"
+      "Bash(git check-ignore *)",
+      "Bash(cd \"/Users/aidancooley/Documents/WT-Cooley-Website\" && python3 \"/private/tmp/claude-501/-Users-aidancooley-Documents-WT-Cooley-Website/2ea75ed9-580d-4ac5-9f57-aa3eef970d4c/scratchpad/batch_convert.py\" 2>/tmp/batch_stderr.log)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
     ]
   }
 }

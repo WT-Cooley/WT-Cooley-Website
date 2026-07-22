@@ -9,9 +9,20 @@ only presentational markup is stripped or restructured (Word bullet paragraphs
 become real <ul><li> lists).
 
 Usage:
-    python3 convert_word_html.py "path/to/Source.html" [--encoding utf-16le] [--out fragment.html]
+    python3 convert_word_html.py "path/to/Source.html" [--encoding auto|utf-16le|utf-8|cp1252] [--out fragment.html]
+
+Encoding defaults to "auto": these files come from three eras of export tooling
+(classic Word "Filtered HTML" is UTF-16LE; a batch of older files across the
+corpus are actually Windows-1252 despite `file` reporting them as plain ASCII,
+because they only contain a handful of non-ASCII bytes -- smart quotes, en-dashes,
+middle dots; Google Docs exports and hand-authored files are UTF-8). Auto-detection
+tries UTF-16LE first (via BOM or null-byte density), then UTF-8, then falls back
+to cp1252, which never raises on arbitrary bytes.
 """
+from __future__ import annotations
+
 import argparse
+import html as html_module
 import re
 import sys
 from pathlib import Path
@@ -21,8 +32,25 @@ from bs4 import BeautifulSoup, Tag
 MSO_LIST_RE = re.compile(r"mso-list:\s*(l\d+)\s+level(\d+)", re.I)
 
 
+def detect_encoding(raw: bytes) -> str:
+    if raw.startswith(b"\xff\xfe") or raw.startswith(b"\xfe\xff"):
+        return "utf-16"
+    # Word's UTF-16LE exports have no BOM but are dense with 0x00 bytes
+    # (every ASCII codepoint is followed by a null byte).
+    sample = raw[:4000]
+    if sample.count(b"\x00") > len(sample) * 0.2:
+        return "utf-16le"
+    try:
+        raw.decode("utf-8")
+        return "utf-8"
+    except UnicodeDecodeError:
+        return "cp1252"
+
+
 def load_source(path: Path, encoding: str) -> str:
     raw = path.read_bytes()
+    if encoding == "auto":
+        encoding = detect_encoding(raw)
     text = raw.decode(encoding)
     return text.replace("﻿", "")
 
@@ -167,12 +195,77 @@ def group_lists(root: Tag) -> int:
     return count
 
 
+def normalize_whitespace(root: Tag) -> None:
+    """Collapse whitespace runs (including the literal newlines Word inserts at its
+    own arbitrary line-wrap points) to single spaces within each text node. This does
+    not change any word -- it only undoes Word's cosmetic mid-sentence line wrapping,
+    the same normalization a browser applies visually to any HTML whitespace anyway."""
+    for node in root.find_all(string=True):
+        collapsed = re.sub(r"\s+", " ", str(node))
+        if collapsed != str(node):
+            node.replace_with(collapsed)
+
+
 def prettify_fragment(root: Tag) -> str:
-    inner = "".join(str(c) for c in root.contents)
-    soup = BeautifulSoup(inner, "html.parser")
-    out = soup.prettify()
-    lines = [line for line in out.splitlines() if line.strip()]
+    # One top-level element (p/ul/h2/...) per line, serialized as-is -- NOT via
+    # BeautifulSoup's prettify(), which inserts a newline (whitespace) between
+    # every adjacent tag pair for readability, even when the source had zero
+    # characters between them (e.g. a footnote marker "word[a]" glued to a word).
+    # That's fine when this fragment is only read by a human, but this fragment
+    # sometimes gets copied verbatim into the final page, so an inserted
+    # separator there would be a real, published text alteration, not just
+    # cosmetic. Serializing each top-level node with str() preserves the exact
+    # inter-tag spacing (already normalized to single spaces/none by
+    # normalize_whitespace) with nothing added.
+    lines = []
+    for child in root.contents:
+        if getattr(child, "name", None):
+            lines.append(str(child))
+        else:
+            # NavigableString.__str__ does not re-escape &/</> the way a
+            # parent tag's str() does -- escape stray top-level text nodes
+            # by hand so "&" doesn't silently become invalid raw "&" in output.
+            text = html_module.escape(str(child)).strip()
+            if text:
+                lines.append(text)
     return "\n".join(lines)
+
+
+def find_endnote_list(soup: BeautifulSoup) -> Tag | None:
+    return soup.find("div", style=lambda s: bool(s) and "mso-element:endnote-list" in s)
+
+
+def convert_endnotes(path: Path, encoding: str) -> list[tuple[str, str]]:
+    """Word's real endnote *text* (References > Insert Endnote) lives in a
+    <div style='mso-element:endnote-list'> that is a SIBLING of WordSection1,
+    not inside it -- find_root()/convert() never sees it, silently dropping
+    real footnote content on any document that uses this feature (mainly
+    academic papers, unlike the informal inline citations used elsewhere).
+    Returns [(marker, cleaned_html), ...] in document order, e.g. ("i", "...").
+    """
+    text = load_source(path, encoding)
+    text = strip_conditional_blocks(text)
+    soup = BeautifulSoup(text, "html.parser")
+    endnote_list = find_endnote_list(soup)
+    if endnote_list is None:
+        return []
+
+    results = []
+    for div in endnote_list.find_all("div", id=re.compile(r"^edn\d+$")):
+        num = re.search(r"\d+", div["id"]).group()
+        # Drop the endnote's own back-reference marker link (e.g. "[i]") --
+        # it's plumbing to jump back to the body, not part of the note's text.
+        for a in div.find_all("a", attrs={"name": re.compile(r"^_edn\d+$")}):
+            a.decompose()
+        unwrap_presentational_spans(div)
+        strip_presentational_attrs(div)
+        remove_o_p_tags(div)
+        remove_stray_vml(div)
+        drop_spacer_paragraphs(div)
+        normalize_whitespace(div)
+        html = prettify_fragment(div)
+        results.append((num, html))
+    return results
 
 
 def convert(path: Path, encoding: str) -> tuple[str, list[str], int]:
@@ -190,6 +283,7 @@ def convert(path: Path, encoding: str) -> tuple[str, list[str], int]:
     remove_stray_vml(root)
     spacer_count = drop_spacer_paragraphs(root)
     li_count = group_lists(root)
+    normalize_whitespace(root)
 
     fragment = prettify_fragment(root)
     print(
@@ -205,7 +299,7 @@ def convert(path: Path, encoding: str) -> tuple[str, list[str], int]:
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__)
     ap.add_argument("source", type=Path)
-    ap.add_argument("--encoding", default="utf-16le")
+    ap.add_argument("--encoding", default="auto")
     ap.add_argument("--out", type=Path, default=None)
     args = ap.parse_args()
 
