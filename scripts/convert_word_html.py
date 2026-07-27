@@ -107,11 +107,19 @@ def capture_list_grouping(root: Tag) -> int:
 
 def unwrap_presentational_spans(root: Tag) -> None:
     # Word never uses <span> for anything semantic -- every span in this corpus is a
-    # font-run, spellcheck (SpellE/GramE), or spacer wrapper. Unwrap all of them,
-    # keeping only their text/child content.
+    # font-run, spellcheck (SpellE/GramE), or spacer wrapper -- EXCEPT Word's real
+    # highlighter tool (mso-highlight:<color>), which at least one course (Fantasy
+    # & Religion) uses to mark passages an explicit in-document NOTE calls
+    # "optional" reading. Promote those runs to a real <mark> instead of stripping
+    # them, since dropping the highlight would leave that NOTE's own claim
+    # meaningless. Everything else gets unwrapped as before.
     for span in root.find_all("span"):
         if span.attrs is None:
             continue  # already decomposed as a descendant of a span removed earlier
+        style = (span.get("style") or "").lower()
+        if "mso-highlight" in style:
+            span.name = "mark"
+            continue
         span.unwrap()
 
 
@@ -140,6 +148,13 @@ def strip_presentational_attrs(root: Tag) -> None:
         for attr in ("style", "lang", "align", "v:shapes"):
             if tag.has_attr(attr):
                 del tag[attr]
+        if tag.name in ("table", "tr", "td", "th"):
+            # Word tables carry fixed pixel widths and HTML4-era presentational
+            # attrs -- strip them (CSS handles table styling) but keep rowspan/
+            # colspan, which are structural, not cosmetic.
+            for attr in ("width", "border", "cellpadding", "cellspacing", "valign", "bgcolor", "height"):
+                if tag.has_attr(attr):
+                    del tag[attr]
 
 
 def remove_o_p_tags(root: Tag) -> None:
