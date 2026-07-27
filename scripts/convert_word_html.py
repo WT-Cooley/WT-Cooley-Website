@@ -120,6 +120,19 @@ def unwrap_presentational_spans(root: Tag) -> None:
         if "mso-highlight" in style:
             span.name = "mark"
             continue
+        if "mso-spacerun" in style:
+            # This span exists solely to represent a run of extra whitespace
+            # (Word's mechanism for preserving repeated spaces through HTML's
+            # normal whitespace collapsing). On a handful of source files the
+            # placeholder character inside it is corrupted at the byte level
+            # in the original export itself (the raw file literally contains
+            # the UTF-8 encoding of U+FFFD, not something our decoder
+            # mangled) -- since this span can only ever mean "whitespace" by
+            # definition, replace its content with a plain space outright
+            # rather than preserving whatever byte garbage survived.
+            span.string = " "
+            span.unwrap()
+            continue
         span.unwrap()
 
 
