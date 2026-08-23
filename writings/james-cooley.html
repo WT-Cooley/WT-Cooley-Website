@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>James Hamilton Cooley, Ph.D. — Plasma Physicist &amp; National Security Leader</title>
+  <meta name="description" content="Portfolio of Dr. James Hamilton Cooley — Plasma Physicist, National Security Strategist, and Office Director at Los Alamos National Laboratory.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="james-cooley/base.css">
+  <link rel="stylesheet" href="james-cooley/style.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%23c9a84c' stroke-width='2'/%3E%3Cellipse cx='16' cy='16' rx='14' ry='6' fill='none' stroke='%23c9a84c' stroke-width='1.5' transform='rotate(45 16 16)'/%3E%3Cellipse cx='16' cy='16' rx='14' ry='6' fill='none' stroke='%23c9a84c' stroke-width='1.5' transform='rotate(-45 16 16)'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%23c9a84c'/%3E%3C/svg%3E">
+</head>
+<body>
+
+  <!-- ════════ NAVIGATION ════════ -->
+  <nav class="nav" id="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="James Hamilton Cooley — Home">
+        <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <circle cx="20" cy="20" r="17" stroke="currentColor" stroke-width="1.5"/>
+          <ellipse cx="20" cy="20" rx="17" ry="7" stroke="currentColor" stroke-width="1.2" transform="rotate(60 20 20)" opacity="0.7"/>
+          <ellipse cx="20" cy="20" rx="17" ry="7" stroke="currentColor" stroke-width="1.2" transform="rotate(-60 20 20)" opacity="0.7"/>
+          <ellipse cx="20" cy="20" rx="17" ry="7" stroke="currentColor" stroke-width="1.2" opacity="0.7"/>
+          <circle cx="20" cy="20" r="3.5" fill="currentColor" opacity="0.9"/>
+        </svg>
+        <span class="nav-logo-text">J. H. Cooley</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="#summary">Summary</a></li>
+        <li><a href="#leadership">Leadership</a></li>
+        <li><a href="#expertise">Expertise</a></li>
+        <li><a href="#cv">CV</a></li>
+        <li><a href="#publications">Publications</a></li>
+      </ul>
+
+      <div style="display:flex;align-items:center;gap:var(--space-2);">
+        <button class="theme-toggle" data-theme-toggle aria-label="Switch to dark mode">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        </button>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ════════ HERO ════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <svg viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <linearGradient id="heroGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:var(--color-accent);stop-opacity:0.08"/>
+            <stop offset="100%" style="stop-color:var(--color-accent);stop-opacity:0.02"/>
+          </linearGradient>
+          <linearGradient id="heroGrad2" x1="0%" y1="100%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:var(--color-primary);stop-opacity:0.06"/>
+            <stop offset="100%" style="stop-color:var(--color-primary);stop-opacity:0.01"/>
+          </linearGradient>
+        </defs>
+        <rect fill="var(--color-bg)" width="1440" height="900"/>
+
+        <!-- Plasma wave field layer 1 -->
+        <g class="hero-wave-group" opacity="0.15">
+          <path d="M0 450 Q180 380 360 450 Q540 520 720 450 Q900 380 1080 450 Q1260 520 1440 450 Q1620 380 1800 450 Q1980 520 2160 450 Q2340 380 2520 450 Q2700 520 2880 450" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
+          <path d="M0 420 Q180 350 360 420 Q540 490 720 420 Q900 350 1080 420 Q1260 490 1440 420 Q1620 350 1800 420 Q1980 490 2160 420 Q2340 350 2520 420 Q2700 490 2880 420" fill="none" stroke="var(--color-accent)" stroke-width="1"/>
+          <path d="M0 480 Q180 410 360 480 Q540 550 720 480 Q900 410 1080 480 Q1260 550 1440 480 Q1620 410 1800 480 Q1980 550 2160 480 Q2340 410 2520 480 Q2700 550 2880 480" fill="none" stroke="var(--color-accent)" stroke-width="1"/>
+        </g>
+
+        <!-- Plasma wave field layer 2 -->
+        <g class="hero-wave-group-2" opacity="0.1">
+          <path d="M0 350 Q240 280 480 350 Q720 420 960 350 Q1200 280 1440 350 Q1680 420 1920 350 Q2160 280 2400 350 Q2640 420 2880 350" fill="none" stroke="var(--color-accent)" stroke-width="1.2"/>
+          <path d="M0 550 Q240 480 480 550 Q720 620 960 550 Q1200 480 1440 550 Q1680 620 1920 550 Q2160 480 2400 550 Q2640 620 2880 550" fill="none" stroke="var(--color-accent)" stroke-width="1.2"/>
+        </g>
+
+        <!-- Interference pattern — radial rings -->
+        <g class="hero-wave-group-3" opacity="0.06">
+          <circle cx="720" cy="450" r="120" fill="none" stroke="var(--color-accent)" stroke-width="0.8"/>
+          <circle cx="720" cy="450" r="200" fill="none" stroke="var(--color-accent)" stroke-width="0.6"/>
+          <circle cx="720" cy="450" r="280" fill="none" stroke="var(--color-accent)" stroke-width="0.5"/>
+          <circle cx="720" cy="450" r="360" fill="none" stroke="var(--color-accent)" stroke-width="0.4"/>
+          <circle cx="720" cy="450" r="440" fill="none" stroke="var(--color-accent)" stroke-width="0.3"/>
+          <circle cx="1200" cy="300" r="100" fill="none" stroke="var(--color-accent)" stroke-width="0.5"/>
+          <circle cx="1200" cy="300" r="180" fill="none" stroke="var(--color-accent)" stroke-width="0.4"/>
+          <circle cx="1200" cy="300" r="260" fill="none" stroke="var(--color-accent)" stroke-width="0.3"/>
+          <circle cx="240" cy="600" r="90" fill="none" stroke="var(--color-accent)" stroke-width="0.5"/>
+          <circle cx="240" cy="600" r="170" fill="none" stroke="var(--color-accent)" stroke-width="0.4"/>
+          <circle cx="240" cy="600" r="250" fill="none" stroke="var(--color-accent)" stroke-width="0.3"/>
+        </g>
+
+        <!-- Subtle grid dots -->
+        <pattern id="gridDots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+          <circle cx="20" cy="20" r="0.8" fill="var(--color-accent)" opacity="0.15"/>
+        </pattern>
+        <rect fill="url(#gridDots)" width="1440" height="900"/>
+      </svg>
+    </div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-label">Los Alamos National Laboratory</div>
+      <h1>James Hamilton Cooley, Ph.D.</h1>
+      <p class="hero-subtitle">Plasma Physicist &nbsp;|&nbsp; National Security Strategist &nbsp;|&nbsp; Los Alamos National Laboratory</p>
+      <p class="hero-tagline">Bridging advanced computational physics and strategic national security analysis to strengthen America's nuclear deterrent</p>
+      <div class="hero-divider"></div>
+    </div>
+  </section>
+
+  <!-- ════════ EXECUTIVE SUMMARY ════════ -->
+  <section class="exec-summary" id="summary">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-label">Overview</span>
+        <h2 class="section-title">Executive Summary</h2>
+      </div>
+
+      <div class="exec-text fade-in-up">
+        <p>Dr. James Cooley is the Office Director for Strategic Analysis &amp; Assessments within the National Security and International Studies directorate at Los Alamos National Laboratory. He leads teams providing strategic advice to LANL senior leadership and across government interagency, military, and intelligence community partners — shaping nuclear deterrence policy through rigorous, quantitative analysis.</p>
+        <p>His career uniquely combines deep technical expertise in plasma physics, computational science, and weapons design with strategic national security leadership. From designing advanced simulation codes for laser-plasma interactions to coordinating Tri-Lab nuclear weapons effects assessments for USSTRATCOM, Dr. Cooley bridges the gap between fundamental physics research and the highest levels of national security decision-making.</p>
+      </div>
+
+      <div class="stats-row fade-in-up">
+        <div class="stat-card">
+          <div class="stat-value">20+</div>
+          <div class="stat-label">Years at LANL</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">821+</div>
+          <div class="stat-label">Citations</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">60+</div>
+          <div class="stat-label">PhD Scientists Managed</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-value">7</div>
+          <div class="stat-label">Defense Programs Awards</div>
+        </div>
+      </div>
+
+      <div class="quote-block fade-in-up">
+        <div class="quote-mark">&ldquo;</div>
+        <p class="quote-text">Understanding weapons effects is part of developing a stable, well-defined nuclear strategy and policy.</p>
+        <p class="quote-attribution">&mdash; James H. Cooley</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ LEADERSHIP & NATIONAL SECURITY ════════ -->
+  <section id="leadership">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-label">Career Progression</span>
+        <h2 class="section-title">Leadership &amp; National Security</h2>
+        <p class="section-subtitle">From nuclear submarine engineer to directing strategic analysis for America's nuclear enterprise</p>
+      </div>
+
+      <div class="timeline fade-in-up">
+        <!-- SAA Director -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2019 – Present</div>
+          <div class="timeline-title">Director, Strategic Analysis &amp; Assessments</div>
+          <div class="timeline-org">NSIS Directorate — Los Alamos National Laboratory</div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Provides strategic advice to LANL senior leadership on future programs and options analysis</li>
+              <li>Develops and presents briefings to DOE, NNSA, DoD, and IC senior leaders</li>
+              <li>Leads LANL engagement with USSTRATCOM J5 for war plan evaluations</li>
+              <li>Nuclear Weapons Effects Coordinator for the LANL Weapons Program</li>
+              <li>Leads Tri-Lab coordination (LANL + LLNL + SNL) in support of U.S. Government agencies</li>
+              <li>Directs Nuclear Winter assessment — modern Tri-Lab modeling effort</li>
+              <li>Developing Net Assessment capability inspired by Andrew Marshall's methodology</li>
+              <li>Leads Strategic Stability Analysis and Consequences of Execution programs</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Deputy Director -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2018 – 2019</div>
+          <div class="timeline-title">Deputy Director, SAA Office</div>
+          <div class="timeline-org">ALDX — Los Alamos National Laboratory</div>
+          <div class="timeline-desc">Transitioned from computational science leadership to strategic national security analysis, supporting the SAA mission during organizational standup.</div>
+        </div>
+
+        <!-- Deputy Division Leader -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2016 – 2017</div>
+          <div class="timeline-title">Deputy Division Leader (Acting)</div>
+          <div class="timeline-org">Computer, Computational &amp; Statistical Science Division (CCS)</div>
+          <div class="timeline-desc">Managed portfolio of 140+ PhD scientists across multiple computational science groups supporting weapons, energy, and fundamental research programs.</div>
+        </div>
+
+        <!-- Group Leader -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2015 – 2018</div>
+          <div class="timeline-title">Group Leader, Computational Physics &amp; Methods</div>
+          <div class="timeline-org">CCS-2 — Los Alamos National Laboratory</div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Led 60+ PhD scientists in radiation transport, climate modeling, plasma physics, and astrophysics</li>
+              <li>Grew program funding by $9M+ (FY15–FY18) across DOE, DoD, and IC missions</li>
+              <li>Expanded staff from 35 to 45 and postdocs from 6 to 17</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Physicist / Project Leader -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">2004 – 2015</div>
+          <div class="timeline-title">Physicist &amp; Project Leader</div>
+          <div class="timeline-org">Los Alamos National Laboratory</div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Weapon designer with experience in secondaries, primaries, and counter-terrorism</li>
+              <li>Led L1 Milestone for Implosion Hydrodynamics and Ignition</li>
+              <li>Program Manager for Verification &amp; Validation</li>
+              <li>Project Leader for Physics Validation, Advanced Scientific Computing</li>
+              <li>Technical Nuclear Forensics — IC Point of Contact for Design Modeling</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Navy -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-date">1994 – 1999</div>
+          <div class="timeline-title">Nuclear Engineer, United States Navy</div>
+          <div class="timeline-org">Naval Reactors — Department of Energy</div>
+          <div class="timeline-desc">
+            <ul>
+              <li>Lead Nuclear Engineer responsible for primary components on submarines</li>
+              <li>Resolved operational concerns in submarine reactor plants</li>
+              <li>Managed steam generator corrosion program</li>
+              <li>Heat exchanger component design for new submarine class</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ TECHNICAL EXPERTISE ════════ -->
+  <section class="expertise-section" id="expertise" style="background:var(--color-surface);">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-label">Domains</span>
+        <h2 class="section-title">Technical Expertise</h2>
+        <p class="section-subtitle">Two decades spanning fundamental physics research, computational science, and national security analysis</p>
+      </div>
+
+      <div class="expertise-grid fade-in-up">
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+          </div>
+          <h3>Plasma Physics &amp; Laser-Plasma Interactions</h3>
+          <p>Parametric instabilities in plasma channel formation, high-intensity laser coupling, laser wakefield acceleration. Developer of fully parallel 3D simulation codes for laser-plasma physics.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+          </div>
+          <h3>Computational Physics &amp; HPC</h3>
+          <p>Led 60+ PhD scientists in radiation transport, climate modeling, nuclear reactor thermo-hydraulics, plasma physics, and astrophysics. Co-developer of QuickPIC — a highly efficient particle-in-cell code (302 citations).</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <h3>Nuclear Weapons Science &amp; Effects</h3>
+          <p>Weapon design experience across secondaries, primaries, and counter-terrorism. Lead Nuclear Weapons Effects Coordinator for the LANL Weapons Program, directing research and Tri-Lab coordination.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20M2 12h20"/></svg>
+          </div>
+          <h3>Inertial Confinement Fusion</h3>
+          <p>Research on ICF implosion dynamics including mix effects, fall-line mix models, heterogeneous burn, and thermonuclear yield analysis. Contributions to NIF experimental campaigns.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </div>
+          <h3>Verification &amp; Validation</h3>
+          <p>Former V&amp;V Program Manager. Led "ground-breaking" work earning Defense Programs Awards of Excellence. Developed Common Model and Predictive Capability Frameworks for the stockpile stewardship program.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+          </div>
+          <h3>Technical Nuclear Forensics</h3>
+          <p>Design Modeling and Intelligence Community Point of Contact for National Technical Nuclear Forensics (NTNF) since 2013, supporting attribution capabilities for nuclear security.</p>
+        </div>
+
+        <div class="expertise-card">
+          <div class="expertise-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+          </div>
+          <h3>Strategic Analysis &amp; Deterrence Theory</h3>
+          <p>Leads strategic stability analysis, net assessment development, nuclear winter assessment, and consequences of execution programs. Provides quantitative analysis for nuclear strategy and policy to senior government leaders.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ INTERACTIVE CV ════════ -->
+  <section class="cv-section" id="cv">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-label">Curriculum Vitae</span>
+        <h2 class="section-title">Career &amp; Credentials</h2>
+        <p class="section-subtitle">Complete professional history with education, leadership, and recognition</p>
+      </div>
+
+      <div class="cv-download fade-in-up">
+        <a href="./james-cooley/Cooley_SES_CV.pdf" class="btn-download" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          Download Full CV (PDF)
+        </a>
+      </div>
+
+      <div class="cv-container fade-in-up">
+
+        <!-- Education -->
+        <div class="cv-group open">
+          <button class="cv-group-header" aria-expanded="true">
+            <h3>Education</h3>
+            <svg class="cv-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="cv-group-body">
+            <div class="cv-entry">
+              <div class="cv-entry-title">Ph.D. — Physics</div>
+              <div class="cv-entry-meta">University of Maryland, College Park &nbsp;|&nbsp; August 2004</div>
+              <div class="cv-entry-desc">Research in parametric instabilities in plasma channel formation, high-intensity laser coupling to plasma channels, and fully parallel 3D simulation codes for laser-plasma interactions.</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">M.S. — Applied Mathematics</div>
+              <div class="cv-entry-meta">University of Maryland, College Park &nbsp;|&nbsp; May 2004</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Certificate — Nuclear Engineering</div>
+              <div class="cv-entry-meta">Bettis Reactor Engineering School, Bettis Atomic Power Laboratory, PA &nbsp;|&nbsp; July 1995</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">B.S. — Physics</div>
+              <div class="cv-entry-meta">University of Texas, Austin &nbsp;|&nbsp; May 1994</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Leadership -->
+        <div class="cv-group">
+          <button class="cv-group-header" aria-expanded="false">
+            <h3>Leadership Experience</h3>
+            <svg class="cv-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="cv-group-body">
+            <div class="cv-entry">
+              <div class="cv-entry-title">Director, Strategic Analysis &amp; Assessments (SAA)</div>
+              <div class="cv-entry-meta">NSIS Directorate, LANL &nbsp;|&nbsp; Feb 2019 – Present</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Deputy Director, SAA Office</div>
+              <div class="cv-entry-meta">ALDX, LANL &nbsp;|&nbsp; Sep 2018 – Feb 2019</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Deputy Division Leader (Acting), CCS Division</div>
+              <div class="cv-entry-meta">LANL &nbsp;|&nbsp; Oct 2016 – Jan 2017</div>
+              <div class="cv-entry-desc">Managed 140+ PhD scientists portfolio across computational science groups.</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Group Leader, Computational Physics &amp; Methods (CCS-2)</div>
+              <div class="cv-entry-meta">LANL &nbsp;|&nbsp; Jan 2015 – Sep 2018</div>
+              <div class="cv-entry-desc">Led 60+ PhD scientists. $9M+ program growth (FY15–FY18). Staff growth 35→45, postdocs 6→17.</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Deputy Group Leader, CCS-2</div>
+              <div class="cv-entry-meta">LANL &nbsp;|&nbsp; Feb 2014 – Jan 2015</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Program Manager, Verification &amp; Validation (Acting)</div>
+              <div class="cv-entry-meta">LANL &nbsp;|&nbsp; Mar 2011 – Sep 2011</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Lead Nuclear Engineer</div>
+              <div class="cv-entry-meta">Naval Reactors, U.S. Navy &nbsp;|&nbsp; 1994 – 1999</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Work Experience -->
+        <div class="cv-group">
+          <button class="cv-group-header" aria-expanded="false">
+            <h3>Work Experience</h3>
+            <svg class="cv-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="cv-group-body">
+            <div class="cv-entry">
+              <div class="cv-entry-title">Office Director, Strategic Analysis &amp; Assessments</div>
+              <div class="cv-entry-meta">Los Alamos National Laboratory &nbsp;|&nbsp; Feb 2019 – Present</div>
+              <div class="cv-entry-desc">
+                <ul>
+                  <li>Provide strategic advice to LANL senior leadership on future programs</li>
+                  <li>Develop and present briefings to DOE, NNSA, DoD, and IC senior leaders</li>
+                  <li>Lead Nuclear Weapons Effects Coordinator for the LANL Weapons Program</li>
+                  <li>Lead LANL portion of Tri-Lab efforts supporting USSTRATCOM</li>
+                  <li>Lead LANL engagement with USSTRATCOM J5 for war plan evaluations</li>
+                  <li>Nuclear Winter assessment with modern Tri-Lab modeling tools</li>
+                  <li>Net Assessment capability development at request of NNSA Administrator</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Group Leader, Computational Physics &amp; Methods (CCS-2)</div>
+              <div class="cv-entry-meta">Los Alamos National Laboratory &nbsp;|&nbsp; Jan 2015 – Sep 2018</div>
+              <div class="cv-entry-desc">
+                <ul>
+                  <li>Led 60+ PhD scientists in radiation transport, climate modeling, nuclear reactor thermo-hydraulics, plasma physics, and astrophysics</li>
+                  <li>$9M+ program growth across DOE, DoD, and IC mission areas</li>
+                  <li>Expanded staff from 35 to 45 and postdocs from 6 to 17</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Physicist &amp; Project Leader</div>
+              <div class="cv-entry-meta">Los Alamos National Laboratory &nbsp;|&nbsp; Sep 2004 – Jan 2015</div>
+              <div class="cv-entry-desc">
+                <ul>
+                  <li>Weapon designer — secondaries, primaries, and counter-terrorism</li>
+                  <li>Technical Point of Contact, L1 Milestone — Initial Conditions for Boost I</li>
+                  <li>Project Leader — Implosion Hydrodynamics and Ignition</li>
+                  <li>Project Leader — Physics Validation, Advanced Scientific Computing</li>
+                  <li>IC Point of Contact for National Technical Nuclear Forensics</li>
+                  <li>Annual Assessment Review team member (2008–2014)</li>
+                </ul>
+              </div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Directed Energy Scholar</div>
+              <div class="cv-entry-meta">Naval Research Laboratories &nbsp;|&nbsp; May – Aug 2004</div>
+              <div class="cv-entry-desc">Laser Wakefield Accelerator modeling and laser pulse propagation in ionizing media.</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Graduate Research Assistant</div>
+              <div class="cv-entry-meta">University of Maryland &nbsp;|&nbsp; Aug 1999 – Aug 2004</div>
+              <div class="cv-entry-desc">Plasma physics research: parametric instabilities, high-intensity laser coupling, 3D simulation code development.</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Lead Nuclear Engineer</div>
+              <div class="cv-entry-meta">Naval Reactors, U.S. Navy &nbsp;|&nbsp; Jul 1994 – Aug 1999</div>
+              <div class="cv-entry-desc">
+                <ul>
+                  <li>Resolved operational concerns in submarine reactor plants</li>
+                  <li>Managed steam generator corrosion program</li>
+                  <li>Aircraft carrier operations changes</li>
+                  <li>Heat exchanger component design for new submarine class</li>
+                  <li>Reactor servicing facility relocation and de-fueling operations</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Awards -->
+        <div class="cv-group">
+          <button class="cv-group-header" aria-expanded="false">
+            <h3>Awards &amp; Recognition</h3>
+            <svg class="cv-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="cv-group-body">
+            <div style="display:flex;flex-wrap:wrap;gap:var(--space-2);margin-bottom:var(--space-6);">
+              <span class="award-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2015 Distinguished Performance
+              </span>
+              <span class="award-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2012 DP Award of Excellence
+              </span>
+              <span class="award-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2011 DP Award of Excellence
+              </span>
+              <span class="award-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2010 DP Award of Excellence
+              </span>
+              <span class="award-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2008 Distinguished Performance
+              </span>
+              <span class="award-badge">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                2007 DP Award of Excellence (x2)
+              </span>
+            </div>
+
+            <div class="cv-entry">
+              <div class="cv-entry-title">Distinguished Performance Award, 2015</div>
+              <div class="cv-entry-desc">Mighty Saber Team contributions</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Defense Programs Award of Excellence, 2012</div>
+              <div class="cv-entry-desc">Lead — L1 Milestone on Implosion, Predictive Capability Framework</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Defense Programs Award of Excellence, 2011</div>
+              <div class="cv-entry-desc">Lead — V&amp;V Common Model development</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Defense Programs Award of Excellence, 2010</div>
+              <div class="cv-entry-desc">Modern energy balance models and methodologies</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Distinguished Performance Award, 2008</div>
+              <div class="cv-entry-desc">Oak Phoenix Data Evaluation Team</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Defense Programs Award of Excellence, 2007</div>
+              <div class="cv-entry-desc">"Ground-breaking" work in Verification and Validation</div>
+            </div>
+            <div class="cv-entry">
+              <div class="cv-entry-title">Defense Programs Award of Excellence, 2007</div>
+              <div class="cv-entry-desc">Altair 4 development team</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ PUBLICATIONS ════════ -->
+  <section id="publications">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-label">Research</span>
+        <h2 class="section-title">Selected Publications</h2>
+        <p class="section-subtitle">Contributions spanning plasma physics, computational science, weapons effects, and nuclear strategy</p>
+      </div>
+
+      <div class="pub-meta-row fade-in-up">
+        <span class="pub-badge">Total Citations: <strong>821+</strong></span>
+        <span class="pub-badge">h-index: <strong>14</strong></span>
+        <a href="https://scholar.google.com/citations?user=7jqPcVoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="pub-badge" style="text-decoration:none;color:var(--color-text);">
+          Google Scholar Profile →
+        </a>
+      </div>
+
+      <div class="pub-list fade-in-up">
+
+        <div class="pub-item">
+          <div class="pub-title">QUICKPIC: A highly efficient particle-in-cell code for modeling wakefield acceleration in plasmas</div>
+          <div class="pub-authors">C Huang, VK Decyk, C Ren, M Zhou, W Lu, WB Mori, JH Cooley, et al.</div>
+          <div class="pub-journal">Journal of Computational Physics 217(2), 658-679, 2006</div>
+          <span class="pub-citations">302 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Quasimonoenergetic electrons from unphased injection into channel guided laser wakefield accelerators</div>
+          <div class="pub-authors">DF Gordon, RF Hubbard, JH Cooley, B Hafizi, A Ting, P Sprangle</div>
+          <div class="pub-journal">Physical Review E 71(2), 2005</div>
+          <span class="pub-citations">63 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Anomalous yield reduction in direct-drive deuterium/tritium implosions due to ³He addition</div>
+          <div class="pub-authors">HW Herrmann, JR Langenbrunner, JM Mack, JH Cooley, DC Wilson, et al.</div>
+          <div class="pub-journal">Physics of Plasmas 16(5), 2009</div>
+          <span class="pub-citations">56 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Climate impact of a regional nuclear weapons exchange: An improved assessment based on detailed source calculations</div>
+          <div class="pub-authors">J Reisner, G D'Angelo, E Koo, W Even, M Hecht, E Hunke, D Comeau, et al.</div>
+          <div class="pub-journal">Journal of Geophysical Research: Atmospheres 123(5), 2752-2772, 2018</div>
+          <span class="pub-citations">49 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">QuickPIC: A highly efficient fully parallelized PIC code for plasma-based acceleration</div>
+          <div class="pub-authors">C Huang, VK Decyk, M Zhou, W Lu, WB Mori, JH Cooley, TM Antonsen Jr, et al.</div>
+          <div class="pub-journal">Journal of Physics: Conference Series 46(1), 190-199, 2006</div>
+          <span class="pub-citations">39 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">The effects of pre-mix on burn in ICF capsules</div>
+          <div class="pub-authors">DC Wilson, GA Kyrala, JF Benage Jr, et al.</div>
+          <div class="pub-journal">Journal of Physics: Conference Series 112(2), 2008</div>
+          <span class="pub-citations">27 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Application of fall-line mix models to understand degraded yield</div>
+          <div class="pub-authors">L Welser-Sherrill, JH Cooley, DA Haynes, DC Wilson, et al.</div>
+          <div class="pub-journal">Physics of Plasmas 15(7), 2008</div>
+          <span class="pub-citations">26 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Experimental quantification of the impact of heterogeneous mix on thermonuclear burn</div>
+          <div class="pub-authors">BJ Albright, TJ Murphy, et al.</div>
+          <div class="pub-journal">Physics of Plasmas 29(2), 2022</div>
+          <span class="pub-citations">23 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Results from single-shock Marble experiments studying thermonuclear burn in the presence of heterogeneous mix on the National Ignition Facility</div>
+          <div class="pub-authors">TJ Murphy, BJ Albright, et al.</div>
+          <div class="pub-journal">High Energy Density Physics 38, 100929, 2021</div>
+          <span class="pub-citations">23 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Detecting surface changes from an underground explosion in granite using unmanned aerial system photogrammetry</div>
+          <div class="pub-authors">ES Schultz-Fellenz, et al.</div>
+          <div class="pub-journal">Pure and Applied Geophysics 175(9), 3159-3177, 2018</div>
+          <span class="pub-citations">23 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Inference of ICF implosion core mix using experimental data and theoretical mix modeling</div>
+          <div class="pub-authors">L Welser-Sherrill, DA Haynes, RC Mancini, JH Cooley, et al.</div>
+          <div class="pub-journal">High Energy Density Physics 5(4), 249-257, 2009</div>
+          <span class="pub-citations">21 citations</span>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-title">Parametric instability in the formation of plasma waveguides</div>
+          <div class="pub-authors">JH Cooley, TM Antonsen, HM Milchberg, et al.</div>
+          <div class="pub-journal">Physical Review E 73(3), 2006</div>
+          <span class="pub-citations">13 citations</span>
+        </div>
+
+      </div>
+
+      <div class="pub-scholar-link fade-in-up">
+        <a href="https://scholar.google.com/citations?user=7jqPcVoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="btn-scholar">
+          View All Publications on Google Scholar
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════ FOOTER ════════ -->
+  <footer class="footer" id="contact">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-name">James Hamilton Cooley, Ph.D.</div>
+          <p>Office Director, Strategic Analysis &amp; Assessments<br>
+          National Security &amp; International Studies<br>
+          Los Alamos National Laboratory</p>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <a href="mailto:jhcooley@lanl.gov">jhcooley@lanl.gov</a>
+          <a href="tel:505-606-0421">505-606-0421</a>
+        </div>
+        <div class="footer-col">
+          <h4>Links</h4>
+          <a href="https://scholar.google.com/citations?user=7jqPcVoAAAAJ&hl=en" target="_blank" rel="noopener noreferrer">Google Scholar</a>
+          <a href="https://www.linkedin.com/in/james-cooley-1827b458" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          <a href="https://www.lanl.gov/org/national-security-and-international-studies/strategic-analysis-assessments" target="_blank" rel="noopener noreferrer">LANL SAA Office</a>
+          <a href="https://www.lanl.gov/media/publications/national-security-science/0424-beyond-the-blast" target="_blank" rel="noopener noreferrer">Beyond the Blast</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-disclaimer">Opinions expressed are personal and do not represent the views of Los Alamos National Laboratory or the U.S. Government.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ════════ SCRIPTS ════════ -->
+  <script>
+  (function() {
+    // ─── Theme Toggle ───
+    const toggle = document.querySelector('[data-theme-toggle]');
+    const root = document.documentElement;
+    let theme = matchMedia('(prefers-color-scheme:dark)').matches ? 'dark' : 'light';
+    root.setAttribute('data-theme', theme);
+    updateToggleIcon();
+
+    function updateToggleIcon() {
+      if (!toggle) return;
+      toggle.setAttribute('aria-label', 'Switch to ' + (theme === 'dark' ? 'light' : 'dark') + ' mode');
+      toggle.innerHTML = theme === 'dark'
+        ? '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+        : '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
+    }
+
+    toggle && toggle.addEventListener('click', function() {
+      theme = theme === 'dark' ? 'light' : 'dark';
+      root.setAttribute('data-theme', theme);
+      updateToggleIcon();
+    });
+
+    // ─── Mobile Nav ───
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    mobileToggle && mobileToggle.addEventListener('click', function() {
+      const isOpen = navLinks.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', isOpen);
+    });
+
+    // Close mobile nav on link click
+    navLinks && navLinks.querySelectorAll('a').forEach(function(link) {
+      link.addEventListener('click', function() {
+        navLinks.classList.remove('open');
+        mobileToggle && mobileToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    // ─── Sticky Nav Shadow ───
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
+      if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+      } else {
+        nav.classList.remove('scrolled');
+      }
+    }, { passive: true });
+
+    // ─── Active Nav Highlighting ───
+    var sections = document.querySelectorAll('section[id]');
+    var navAnchors = document.querySelectorAll('.nav-links a');
+    var sectionMap = {};
+    navAnchors.forEach(function(a) {
+      var href = a.getAttribute('href');
+      if (href && href.startsWith('#')) {
+        sectionMap[href.slice(1)] = a;
+      }
+    });
+
+    function updateActiveNav() {
+      var scrollPos = window.scrollY + 120;
+      var current = '';
+      sections.forEach(function(section) {
+        if (section.offsetTop <= scrollPos) {
+          current = section.id;
+        }
+      });
+      navAnchors.forEach(function(a) { a.classList.remove('active'); });
+      if (current && sectionMap[current]) {
+        sectionMap[current].classList.add('active');
+      }
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    updateActiveNav();
+
+    // ─── CV Accordion ───
+    document.querySelectorAll('.cv-group-header').forEach(function(header) {
+      header.addEventListener('click', function() {
+        var group = header.closest('.cv-group');
+        var isOpen = group.classList.contains('open');
+        group.classList.toggle('open');
+        header.setAttribute('aria-expanded', !isOpen);
+      });
+    });
+
+    // ─── Scroll Animations ───
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.fade-in-up').forEach(function(el) {
+      observer.observe(el);
+    });
+  })();
+  </script>
+
+<script data-pplx-inline-edit>
+(function(){
+  if(window===window.top)return;
+  function inlineAll(orig,clone){
+    if(orig.nodeType!==1)return;
+    try{
+      var cs=getComputedStyle(orig);
+      var t='';
+      for(var i=0;i<cs.length;i++){t+=cs[i]+':'+cs.getPropertyValue(cs[i])+';';}
+      clone.style.cssText=t;
+    }catch(e){}
+    var oc=orig.children,cc=clone.children;
+    for(var j=0;j<oc.length&&j<cc.length;j++){inlineAll(oc[j],cc[j]);}
+  }
+  function stripExternal(clone){
+    var imgs=clone.querySelectorAll('img');
+    for(var i=0;i<imgs.length;i++){
+      var s=imgs[i].getAttribute('src');
+      if(s&&!s.startsWith('data:'))imgs[i].removeAttribute('src');
+    }
+    var all=clone.querySelectorAll('*');
+    for(var i=0;i<all.length;i++){
+      var st=all[i].style.cssText;
+      if(st&&st.indexOf('url(')>=0){
+        all[i].style.cssText=st.replace(/url\(["']?(?!data:)[^)"']*["']?\)/gi,'none');
+      }
+    }
+  }
+  window.addEventListener('message',function(e){
+    if(!e.data||e.data.type!=='INLINE_EDIT_CAPTURE_REQUEST')return;
+    var scrollX=window.scrollX||window.pageXOffset||0;
+    var scrollY=window.scrollY||window.pageYOffset||0;
+    var w=window.innerWidth,h=window.innerHeight;
+    try{
+      var clone=document.documentElement.cloneNode(true);
+      var rm=clone.querySelectorAll('script,link[rel="stylesheet"],style');
+      for(var i=0;i<rm.length;i++){rm[i].remove();}
+      inlineAll(document.documentElement,clone);
+      stripExternal(clone);
+      var html=new XMLSerializer().serializeToString(clone);
+      var svg='<svg xmlns="http://www.w3.org/2000/svg" width="'+w+'" height="'+h+'">'
+        +'<foreignObject width="100%" height="100%">'
+        +'<div xmlns="http://www.w3.org/1999/xhtml" style="width:'+w+'px;height:'+h+'px;overflow:hidden">'
+        +'<div style="transform:translate(-'+scrollX+'px,-'+scrollY+'px);transform-origin:top left">'
+        +html+'</div></div></foreignObject></svg>';
+      var svgUrl='data:image/svg+xml;charset=utf-8,'+encodeURIComponent(svg);
+      var img=new Image();
+      img.onload=function(){
+        var c=document.createElement('canvas');c.width=w;c.height=h;
+        c.getContext('2d').drawImage(img,0,0);
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:c.toDataURL('image/png'),scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.onerror=function(){
+        window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+      };
+      img.src=svgUrl;
+    }catch(err){
+      window.parent.postMessage({type:'INLINE_EDIT_SCREENSHOT_RESULT',dataUrl:null,scrollX:scrollX,scrollY:scrollY},'*');
+    }
+  });
+})();
+</script></body>
+</html>
